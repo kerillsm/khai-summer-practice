@@ -33,9 +33,26 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClInclude Include="findCoords.h" />
+    <ClInclude Include="findAngle.h" />
+    <ClInclude Include="findDistance.h" />
+    <ClInclude Include="findHeights.h" />
+    <ClInclude Include="findInnerRadius.h" />
+    <ClInclude Include="findMedianas.h" />
+    <ClInclude Include="findSquare.h" />
+    <ClInclude Include="findHalfPerimetr.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="types.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="findAngle.cpp" />
+    <ClCompile Include="findCoords.cpp" />
+    <ClCompile Include="findDistance.cpp" />
+    <ClCompile Include="findHalfPerimetr.cpp" />
+    <ClCompile Include="findHeights.cpp" />
+    <ClCompile Include="findInnerRadius.cpp" />
+    <ClCompile Include="findMedianas.cpp" />
+    <ClCompile Include="findSquare.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">

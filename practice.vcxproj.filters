@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="findCoords.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="findDistance.cpp" />
+    <ClCompile Include="findAngle.cpp" />
+    <ClCompile Include="findMedianas.cpp" />
+    <ClCompile Include="findHalfPerimetr.cpp" />
+    <ClCompile Include="findSquare.cpp" />
+    <ClCompile Include="findHeights.cpp" />
+    <ClCompile Include="findInnerRadius.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="findCoords.h" />
+    <ClInclude Include="findDistance.h" />
+    <ClInclude Include="types.h" />
+    <ClInclude Include="findAngle.h" />
+    <ClInclude Include="findMedianas.h" />
+    <ClInclude Include="findSquare.h" />
+    <ClInclude Include="findHalfPerimetr.h" />
+    <ClInclude Include="findHeights.h" />
+    <ClInclude Include="findInnerRadius.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

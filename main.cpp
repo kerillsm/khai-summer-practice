@@ -10,7 +10,6 @@
 #include <stdio.h>
 
 int main(int argc, char** argv) {
-	testing::InitGoogleTest(&argc, argv);
 	setlocale(LC_ALL, "Russian");
 	double x1, x2, x3, y1, y2, y3, c1, c2, c3 = 0;
 	coords intersection1x2, intersection2x3, intersection1x3;
@@ -28,12 +27,16 @@ int main(int argc, char** argv) {
 	printf("Коэффициенты III(третьей) прямой вида A2x+B2y+C2=0: \n");
 	scanf_s("%lf %lf %lf", &x3, &y3, &c3);
 
+	// x, y не ввведены
+	if ((x1 == 0 && y1 == 0) || (x2 == 0 && y2 == 0) || (x3 == 0 && y3 == 0)) {
+		printf("Введёные данные неверны. Чтобы построить треугольник, нужно три прямые");
+		exit(0);
+	}
+
 	// Нахождение x,y координат пересечения для уравнений
 	intersection1x2 = findCoords(x1, y1, c1, x2, y2, c2);
 	intersection2x3 = findCoords(x2, y2, c2, x3, y3, c3);
 	intersection1x3 = findCoords(x1, y1, c1, x3, y3, c3);
-
-	// TODO: сделать валидацию входящих параметров
 
 	// Нахождение параметров треугольника:
 	// Стороны a, b, c
@@ -53,6 +56,7 @@ int main(int argc, char** argv) {
 	// Радиус вписаной окружности
 	r = findInnerRadius(S, hP);
 
+	// Вывод 
 	printf("Координаты пересечения: \n");
 	printf("Первой I и II прямой: x=%lf y=%lf\n", intersection1x2.x, intersection1x2.y);
 	printf("Первой II и III прямой: x=%lf y=%lf\n", intersection2x3.x, intersection2x3.y);
@@ -77,5 +81,5 @@ int main(int argc, char** argv) {
 	printf("c: %lf \n", heights.hc);
 	printf("Радиус вписанной окружности %lf \n", r);
 
-	return RUN_ALL_TESTS();
+	return 0;
 }
